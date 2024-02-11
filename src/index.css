@@ -1,3 +1,13 @@
 .todo {
   color: red;
 }
+@media only screen and (max-width: 500) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: lightcoral;
+  }
+}
