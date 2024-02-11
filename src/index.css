@@ -1,5 +1,14 @@
 .todo {
   color: red;
+  background-color: aquamarine;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
 }
 @media only screen and (max-width: 390) {
   .container {
