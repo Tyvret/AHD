@@ -89,7 +89,7 @@ export default function App() {
   //   egg: false,
   // });
 
-  const [locked, setLocked] = React.useState(true);
+  // const [locked, setLocked] = React.useState(true);
 
   const [submited, setSubmited] = React.useState(false);
 
@@ -137,7 +137,7 @@ export default function App() {
         <CountdownTimer />
       </div>
 
-      {!locked && (
+      {/* {!locked && (
         <div className="card-container">
           <Card
             onClick={handleClick}
@@ -155,7 +155,7 @@ export default function App() {
             bild="https://www.svgrepo.com/show/227324/fried-egg.svg"
           />
         </div>
-      )}
+      )} */}
       {!submited && (
         <p className="message">
           Tyvärr har jag inte hunnit färdigt med denna "app" jag tänkte
