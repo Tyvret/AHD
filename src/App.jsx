@@ -93,7 +93,6 @@ export default function App() {
 
   const [submited, setSubmited] = React.useState(false);
 
-  const [data, setData] = React.useState({});
   const [fadeIn, setFadeIn] = React.useState(false);
 
   function handleClick(name) {
@@ -103,7 +102,7 @@ export default function App() {
   async function submitIt(e) {
     try {
       e.preventDefault();
-      await setData(choices);
+
       const newData = choices;
       await push(filmCollection, newData);
       console.log("Todo added successfully!");
