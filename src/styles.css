@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Libre+Baskerville:ital@1&family=Protest+Riot&family=Satisfy&family=Space+Mono&family=Yantramanav:wght@700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Protest Riot", sans-serif;
+  text-align: center;
+  background-color: aqua;
+  height: 100vh;
+  text-align: center;
+}
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  padding: 20px;
+}
+.App h1 {
+  font-size: 50px;
+  color: rgb(70, 54, 61);
+}
+.rotating-heart {
+  position: relative;
+}
+.rotating-heart > .heart {
+  display: inline-block;
+  font-size: 19rem;
+  animation: rock 3s infinite alternate;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.lock {
+  font-size: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -10%);
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  flex-direction: row;
+  gap: 40px;
+}
+.timer {
+  font-size: 10px;
+  color: rgb(34, 24, 24);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-132%, 95%);
+  width: 80px;
+  letter-spacing: 1.05px;
+}
+
+hr {
+  /* Set the color of the line */
+  color: #000000;
+  /* Set the width of the line */
+  width: 80%;
+  /* Set the thickness (height) of the line */
+  height: 2px;
+  /* Set the style of the line (solid, dashed, dotted, etc.) */
+  border-style: solid;
+  /* Add space above and below the line */
+  margin: 20px auto;
+}
+
+.card {
+  height: 100px;
+  width: 80px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgb(140, 173, 168);
+}
+.card > img {
+  height: 50%;
+}
+.card > img:active {
+  height: 40%;
+}
+
+.card:active {
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.img-container {
+  position: relative;
+  height: 600px;
+  width: 300px;
+  right: -20%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.box {
+  box-shadow: 0 20px 100px 10px rgba(0, 0, 0, 3);
+  width: 300px;
+  height: 440px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  position: absolute;
+  top: 50%;
+  transition: 1s ease-in-out;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.box:first-of-type {
+  z-index: 5;
+  opacity: 0;
+  left: 15%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+}
+
+.box:nth-of-type(2) {
+  opacity: 1;
+  left: 20%;
+  transform: translate(-50%, -50%) rotateY(-10deg);
+}
+.box:nth-of-type(3) {
+  opacity: 0.75;
+  left: 25%;
+  z-index: 10;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-50px);
+}
+
+.box:nth-of-type(4) {
+  opacity: 0.5;
+  left: 30%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-100px);
+}
+.box:nth-of-type(5) {
+  opacity: 0.5;
+  left: 35%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+}
+.box:nth-of-type(6) {
+  opacity: 0.5;
+  left: 40%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+}
+.box:nth-of-type(7) {
+  opacity: 0.4;
+  left: 40%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-250px);
+}
+.box:nth-of-type(8) {
+  opacity: 0.4;
+  left: 40%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-300px);
+}
+.box:nth-of-type(9) {
+  opacity: 0.5;
+  left: 40%;
+  z-index: 5;
+  color: #eee;
+  transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-350px);
+}
+
+.active {
+  background: rgba(0, 128, 0, 0.604);
+  opacity: 0.5;
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.active-card {
+  width: 55%;
+}
+
+.message {
+  line-height: 2;
+  max-width: 80%;
+}
+
+@media (max-width: 667px) {
+  /* iPhone SE landscape width */
+  .box {
+    box-shadow: 0 20px 100px 10px rgba(0, 0, 0, 3);
+    width: 440px;
+    height: 300px;
+  }
+  body {
+    height: 100vh;
+    overflow: hidden;
+
+    overflow: scroll;
+  }
+
+  .App {
+    margin-top: 0;
+    height: 80%;
+  }
+
+  .rotating-heart > .heart {
+    font-size: 9rem; /* Adjust font size for smaller screens */
+  }
+
+  .lock {
+    font-size: 5rem; /* Adjust font size for smaller screens */
+  }
+  .timer {
+    font-size: 7px;
+    transform: translate(-108%, 85%);
+  }
+
+  /* Other adjustments for smaller screens */
+}
+
+@media (max-width: 375px) {
+  /* iPhone SE portrait width */
+  .box {
+    box-shadow: 0 20px 100px 10px rgba(0, 0, 0, 3);
+    width: 300px;
+    height: 440px;
+  }
+  body {
+    height: 100vh;
+    overflow: hidden;
+
+    overflow: scroll;
+  }
+
+  .App {
+    height: 80%;
+    margin: 0 auto;
+  }
+
+  .rotating-heart > span {
+    font-size: 12rem; /* Adjust font size for smaller screens */
+  }
+
+  .lock {
+    font-size: 5rem; /* Adjust font size for smaller screens */
+  }
+
+  /* Other adjustments for smaller screens */
+}
+
+section > h1 {
+  margin-top: 10%;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  align-content: center;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.submit {
+  padding: 20px 40px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 50px;
+  cursor: pointer;
+  font-family: "Protest Riot", sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+.submit:active {
+  background: rgb(71, 126, 71);
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+.img-slider-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.img-slider-container.fade-in {
+  opacity: 1;
+}

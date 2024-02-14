@@ -1,24 +1,52 @@
-.todo {
-  color: red;
-  background-color: rgb(255, 127, 127);
-  padding: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,400;1,700&family=Protest+Riot&family=Ubuntu:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
+  position: relative;
+  font-family: "Protest Riot", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background-color: aqua;
   height: 100vh;
+  padding: 20px;
 }
-@media only screen and (max-width: 800px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: lightcoral;
+
+h1 {
+  letter-spacing: 3px;
+  margin-top: 30px;
+  color: #000080;
+}
+.quotes-container {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.quote {
+  letter-spacing: 2px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(-10deg);
   }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.heart {
+  animation: rock 6s infinite;
+  font-size: 8rem;
 }

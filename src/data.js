@@ -1,16 +1,20 @@
-const testData = [
-  {
-    egg: {
-      boiler: "boiled",
-      scrambled: false,
-    },
-  },
-  {
-    bread: {
-      roasted: false,
-      plain: true,
-    },
-  },
+export const quotes = [
+  "Du är väldigt rolig!💗",
+  "Du är vacker!💗",
+  "Jag är väldigt stolt över dig!",
+  "Du är väldigt inspirerande!",
+  "Du är omtänksam!💗",
+  "Du är ganska rolig på TikTok!",
+  "Du är bäst på att mysa!",
+  "Du tar hand om de runt dig 💗",
+  "Du gör din pojkvän väldigt glad",
+  "Vi går framåt mot en grym framtid 💗",
+  "Du supportar mig när jag behöver det",
+  "Du gör mig väldigt glad",
+  "Du är en fantastisk Matte",
+  "Min svans viftar av glädje när jag ser dig! 🙄",
+  "Det är så du säger",
+  "En framtid i ett hus med trädgård 🏡💗",
+  "Du är väldigt duktig på det mesta!",
 ];
-
-export default testData;
+//

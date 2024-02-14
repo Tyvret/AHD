@@ -1,9 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection } from "firebase/firestore";
+import { getDatabase, ref } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOuw2v4K_7YgeB6c_Yo76KdF1twRefUgE",
   authDomain: "scrimbatest-a85bb.firebaseapp.com",
+  databaseURL:
+    "https://scrimbatest-a85bb-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "scrimbatest-a85bb",
   storageBucket: "scrimbatest-a85bb.appspot.com",
   messagingSenderId: "808487884521",
@@ -11,5 +13,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-export const notesCollection = collection(db, "todos");
+const db = getDatabase(app);
+export const filmCollection = ref(db, "val");
